@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/simpleBackgroundColor"
+    tools:context=".Home">
+
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:padding="5sp"
+       android:gravity="center"
+       tools:ignore="MissingConstraints">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/textAlliedGlobal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="AlliedGlobal"
+               android:textSize="15sp"
+               android:layout_marginRight="10dp"
+               app:layout_constraintBottom_toTopOf="@+id/textServices"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.038"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/textServices"
+               tools:ignore="MissingConstraints" />
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/textTechnology"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="technology"
+                   android:textColor="#009688"
+                   android:textSize="25sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.266"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/textServices"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="services"
+                   android:textColor="#009688"
+                   android:textSize="20sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.235"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="@+id/textTechnology"
+                   tools:ignore="MissingConstraints" />
+
+           </LinearLayout>
+
+       </LinearLayout>
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Welcome"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textServices"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textCompanyNamerhere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Company Namerhere"
+            android:textColor="#009688"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textWelcome"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textLatestActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="Latest active positions"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCompanyNamerhere"
+            tools:ignore="MissingConstraints" />
+
+       <ScrollView
+           android:id="@+id/scrollView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textLatestActive"
+           app:layout_constraintVertical_bias="0.0"
+           tools:ignore="MissingConstraints">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:padding="5sp"
+               tools:ignore="MissingConstraints">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:gravity="center"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="355dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="25dp"
+                       android:layout_marginBottom="15dp"
+                       android:background="@drawable/containers_style_home"
+                       android:gravity="center_vertical"
+                       android:orientation="vertical"
+                       android:padding="5sp"
+                       tools:ignore="MissingConstraints">
+
+                       <TextView
+                           android:id="@+id/textJavaDeveloper"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Java developer"
+                           android:textColor="@color/black"
+                           android:textSize="30sp"
+                           android:textStyle="bold" />
+
+                       <TextView
+                           android:id="@+id/textDetail"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Junior - 3 Positions - Sep 21"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:id="@+id/textTotalResumen"
+                           android:layout_width="wrap_content"
+                           android:layout_height="match_parent"
+                           android:layout_marginTop="32dp"
+                           android:text="2 Resumens to view"
+                           android:textColor="@color/black"
+                           android:textSize="20sp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="355dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="15dp"
+                       android:background="@drawable/containers_style_home"
+                       android:gravity="center_vertical"
+                       android:orientation="vertical"
+                       android:padding="5sp"
+                       tools:ignore="MissingConstraints">
+
+                       <TextView
+                           android:id="@+id/textFlutterDeveloper"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Flutter developer"
+                           android:textColor="@color/black"
+                           android:textSize="30sp"
+                           android:textStyle="bold" />
+
+                       <TextView
+                           android:id="@+id/textDetailFlutter"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Middle - 1 Position - Sep 13"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:id="@+id/textTotalResumenFlutter"
+                           android:layout_width="wrap_content"
+                           android:layout_height="match_parent"
+                           android:layout_marginTop="32dp"
+                           android:text="1 Resumen to view"
+                           android:textColor="@color/black"
+                           android:textSize="20sp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="355dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="35dp"
+                       android:background="@drawable/containers_style_home"
+                       android:gravity="center_vertical"
+                       android:orientation="vertical"
+                       android:padding="5sp"
+                       tools:ignore="MissingConstraints">
+
+                       <TextView
+                           android:id="@+id/textNetDeveloper"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text=".NET developer"
+                           android:textColor="@color/black"
+                           android:textSize="30sp"
+                           android:textStyle="bold" />
+
+                       <TextView
+                           android:id="@+id/textDetailNet"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Senior - 2 Positions - Sep 9"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:id="@+id/textTotalResumenNet"
+                           android:layout_width="wrap_content"
+                           android:layout_height="match_parent"
+                           android:layout_marginTop="35dp"
+                           android:text="1 Resumen to view"
+                           android:textColor="@color/black"
+                           android:textSize="20sp" />
+                   </LinearLayout>
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/textView"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="35dp"
+                   android:text="See all positions"
+                   android:textColor="#009688"
+                   android:textAlignment="center"
+                   android:textSize="24sp" />
+
+
+               <LinearLayout
+                   android:layout_width="460dp"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/containers_style_home"
+                   android:orientation="vertical"
+                   tools:ignore="MissingConstraints">
+
+                   <TextView
+                       android:id="@+id/textKnowOurComplementary"
+                       android:layout_width="match_parent"
+                       android:layout_height="55dp"
+                       android:layout_marginTop="35dp"
+                       android:textAlignment="center"
+                       android:text="Know our complementary"
+                       android:textColor="#009688"
+                       android:textSize="30sp"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:id="@+id/textTechnologyServices"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Technology Services"
+                       android:textColor="#009688"
+                       android:textSize="30sp"
+                       android:textAlignment="center"
+                       android:textStyle="bold" />
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/containers_style_home"
+                       android:gravity="center"
+                       android:orientation="horizontal"
+                       android:padding="5sp"
+                       tools:ignore="MissingConstraints">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/containers_style_home"
+                           android:gravity="center"
+                           android:layout_marginRight="50dp"
+                           android:orientation="vertical"
+                           android:padding="5sp"
+                           tools:ignore="MissingConstraints">
+
+                           <Button
+                               android:id="@+id/button1"
+                               android:layout_width="97dp"
+                               android:layout_height="97dp"
+                               android:background="@drawable/style_container_home"
+                               android:textColor="@color/white"
+                               android:textStyle="bold" />
+
+                           <TextView
+                               android:id="@+id/textADocumentManagement"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textAlignment="center"
+                               android:text="Document \n Management"
+                               android:textSize="14sp" />
+                       </LinearLayout>
+
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/containers_style_home"
+                           android:gravity="center"
+                           android:orientation="vertical"
+                           android:padding="5sp"
+                           tools:ignore="MissingConstraints">
+
+                           <Button
+                               android:id="@+id/button2"
+                               android:layout_width="97dp"
+                               android:layout_height="97dp"
+                               android:background="@drawable/style_container_home"
+                               android:textColor="@color/white"
+                               android:textStyle="bold" />
+
+                           <TextView
+                               android:id="@+id/textAdministrativeServices"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textAlignment="center"
+                               android:text="Administrative \nServices Organization"
+                               android:textSize="14sp" />
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/containers_style_home"
+                       android:gravity="center"
+                       android:layout_marginBottom="75dp"
+                       android:orientation="horizontal"
+                       android:padding="5sp"
+                       tools:ignore="MissingConstraints">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/containers_style_home"
+                           android:gravity="center"
+                           android:layout_marginRight="50dp"
+                           android:orientation="vertical"
+                           android:padding="5sp"
+                           tools:ignore="MissingConstraints">
+
+                           <Button
+                               android:id="@+id/button3"
+                               android:layout_width="97dp"
+                               android:layout_height="97dp"
+                               android:background="@drawable/style_container_home"
+                               android:textColor="@color/white"
+                               android:textStyle="bold" />
+
+                           <TextView
+                               android:id="@+id/textTechnicalDocumentation"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textAlignment="center"
+                               android:text="Technical \nDocumentation"
+                               android:textSize="14sp" />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/containers_style_home"
+                           android:gravity="center"
+                           android:orientation="vertical"
+                           android:padding="5sp"
+                           tools:ignore="MissingConstraints">
+
+                           <Button
+                               android:id="@+id/button4"
+                               android:layout_width="97dp"
+                               android:layout_height="97dp"
+                               android:background="@drawable/style_container_home"
+                               android:text=""
+                               android:textColor="@color/white"
+                               android:textStyle="bold" />
+
+                           <TextView
+                               android:id="@+id/textProjectManagement"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textAlignment="center"
+                               android:text="Project Management \nas a Service"
+                               android:textSize="14sp" />
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+
+           </LinearLayout>
+       </ScrollView>
+
+   </LinearLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/icon_home"
+        />
+    <item android:title="Positions"
+        android:id="@+id/positions"
+        android:icon="@drawable/icon_positions"
+        />
+    <item android:title="Find Talents"
+        android:id="@+id/findTalents"
+        android:icon="@drawable/icon_person_search"
+        />
+</menu>

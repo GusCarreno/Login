@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/simpleBackgroundColor"
+    tools:context=".ToView">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textAlliedGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AlliedGlobal"
+                android:textSize="15sp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/textServices"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textServices"
+                tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textTechnology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="technology"
+                    android:textColor="#009688"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.266"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textServices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="services"
+                    android:textColor="#009688"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.235"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textTechnology"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Current active positions"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textServices"
+            tools:ignore="MissingConstraints" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="478dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLatestActive"
+            app:layout_constraintHorizontal_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5sp"
+                android:gravity="center"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/buttonToView"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="To view" />
+                <Button
+                    android:id="@+id/buttonInProgress"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="In progress" />
+                <Button
+                    android:id="@+id/buttonHired"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/style_button"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="Hired" />
+                <Button
+                    android:id="@+id/buttonRejected"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_height="wrap_content"
+                    android:text="Rejected" />
+                <Button
+                    android:id="@+id/buttonClosed"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:text="Closed" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLatestActive"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5sp"
+                tools:ignore="MissingConstraints">
+
+
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/style_border_green"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textDevOps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DevOps Enginner"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailDevOps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior - 2 Position - Jun 17"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenDevOps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="2 Positions filled"
+                        android:textColor="#009688"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/style_border_green"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textDigitalMarketing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Digital Marketing Specialist"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailDigitalMarketing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Middle - 2 Positions - May 23"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenDigitalMarketing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="2 position filled"
+                        android:textColor="#009688"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/style_border_green"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textIosSwift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IOS Swift Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailIosSwift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meddie - 1 Positions - May 13"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenIosSwift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="1 position filled"
+                        android:textColor="#009688"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/style_border_green"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textScrumMaster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scrum Master"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailScrumMaster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior - 2 Positions - Jun 17"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenScrumMaster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="2 position filled"
+                        android:textColor="#009688"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="65dp"
+                    android:background="@drawable/style_border_green"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textRpaDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RPS Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailRpaDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior - 2 Positions - Apr 16"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenRpaDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="2 position filled"
+                        android:textColor="#009688"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="454dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

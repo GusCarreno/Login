@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/simpleBackgroundColor"
+    tools:context=".ToView">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textAlliedGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AlliedGlobal"
+                android:textSize="15sp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/textServices"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textServices"
+                tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textTechnology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="technology"
+                    android:textColor="#009688"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.266"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textServices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="services"
+                    android:textColor="#009688"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.235"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textTechnology"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Current active positions"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textServices"
+        tools:ignore="MissingConstraints" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="478dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLatestActive"
+            app:layout_constraintHorizontal_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5sp"
+                android:gravity="center"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/buttonToView"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/style_button"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="To view" />
+                <Button
+                    android:id="@+id/buttonInProgress"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="In progress" />
+                <Button
+                    android:id="@+id/buttonHired"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hired" />
+                <Button
+                    android:id="@+id/buttonRejected"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_height="wrap_content"
+                    android:text="Rejected" />
+                <Button
+                    android:id="@+id/buttonClosed"
+                    android:background="@drawable/styles_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:text="Closed" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLatestActive"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5sp"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textJavaDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Java Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Junior - 3 Positions - Sep 21"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="32dp"
+                        android:text="2 Resumens to view"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textFlutterDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Flutter Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailFlutter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Middle - 1 Position - Sep 13"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenFlutter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="32dp"
+                        android:text="1 Resumen to view"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textNetDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=".NET Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailNet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior - 2 Positions - Sep 9"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenNet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="1 Resumen to view"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textPhpDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHP Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailPhp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior - 4 Positions - Sep 6"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenPhp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="3 Resumes to view"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="65dp"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textAngularDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angular Developer"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDetailAngular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meddie - 2 Positions - Sep 6"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textTotalResumenAngular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:text="2 Resumes to view"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="454dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/containers_style_home"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    tools:ignore="MissingConstraints">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

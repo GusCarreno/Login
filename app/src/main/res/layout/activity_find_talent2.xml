@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/simpleBackgroundColor"
+    tools:context=".ToView">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:padding="5sp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textTechnology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="technology"
+            android:textColor="#009688"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="services"
+            android:textColor="#009688"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textTechnology"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textAlliedGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AlliedGlobal"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/textServices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textServices"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Hello Jonathan!"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textServices"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textWhichTalent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Which talent can we help"
+            android:textSize="25sp"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textYouFindToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="you find today?"
+            android:textSize="25sp"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5sp"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:background="@drawable/style_button_budget"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="60dp"
+                android:text="Profile"
+                android:textSize="20sp"
+                android:textColor="#CACACA"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button2"
+                android:background="@drawable/style_button"
+                android:layout_width="50dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="2" />
+            <TextView
+                android:id="@+id/textBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Budget"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="#005048"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="478dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLatestActive"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5sp"
+                tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/textWantFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="I want it to be from:"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="#005048"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonWant"
+                android:background="@drawable/style_button"
+                android:layout_width="30dp"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textNearshore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nearshore"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20sp"
+                android:textColor="#009688"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonWant2"
+                android:background="@drawable/style_container_home"
+                android:layout_width="30dp"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textOffShore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Offshore"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonWant3"
+                android:background="@drawable/style_container_home"
+                android:layout_width="30dp"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textAny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Any"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textEnglishLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="English &amp; Level"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="#005048"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonEnglishLevel1"
+                android:background="@drawable/style_container_home"
+                android:layout_width="20dp"
+                android:textColor="@color/white"
+                android:layout_height="20dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="None"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="21dp"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonEnglishLevel2"
+                android:background="@drawable/style_container_home"
+                android:layout_width="20dp"
+                android:textColor="@color/white"
+                android:layout_height="20dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Low"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="21dp"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonEnglishLevel3"
+                android:background="@drawable/style_button"
+                android:layout_width="20dp"
+                android:textColor="@color/white"
+                android:layout_height="20dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Medium"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="21dp"
+                android:textSize="18sp"
+                android:textColor="#009688"
+                tools:ignore="MissingConstraints" />
+
+
+            <Button
+                android:id="@+id/buttonEnglishLevel4"
+                android:background="@drawable/style_container_home"
+                android:layout_width="20dp"
+                android:textColor="@color/white"
+                android:layout_height="20dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="High"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textEstimated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="Estimated budget:"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="#005048"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonEstimated"
+                android:background="@drawable/style_button"
+                android:layout_width="30dp"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textPerHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Per hour"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="21dp"
+                android:textSize="20sp"
+                android:textColor="#009688"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/buttonEstimated2"
+                android:background="@drawable/style_container_home"
+                android:layout_width="30dp"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textPerMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Per month"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="21dp"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="380dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/containers_style_home"
+                    android:ems="10"
+                    android:layout_marginTop="55dp"
+                    android:hint="Additional info"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="357dp" />
+
+        <Button
+            android:id="@+id/buttonFindMyTalent"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="95dp"
+            android:background="@drawable/style_button"
+            android:onClick="registrar"
+            android:text="Find my talent"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
